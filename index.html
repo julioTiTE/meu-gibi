@@ -1,31 +1,132 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gibi</title>
+    <title>Quadrinhos</title>
     <style>
         body {
-            background-color: #4cb2c4bc; /* Cor de gelo */
-            margin: 0; /* Remover margens padrão */
-            padding: 0; /* Remover preenchimento padrão */
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #d7d2d2e0; /* Azul claro para o fundo */
         }
+        
+        .comic {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        
+        .comic img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .page {
+            margin-bottom: 40px; /* Espaçamento extra em todas as páginas */
+            overflow: hidden; /* Evita que a div .page se estenda além das imagens */
+            position: relative; /* Adicionado */
+            margin-top: 40px; /* Espaçamento extra antes da foto 1 */
+        }
+
+        /* Alinhar a primeira imagem à esquerda */
+        .page img:nth-child(1) {
+            float: left;
+            margin-left: 5px; /* Ajuste mais sutil */
+        }
+
+        /* Alinhar a terceira imagem à esquerda */
+        .page img:nth-child(3) {
+            float: left;
+            margin-left: 5px; /* Ajuste mais sutil */
+        }
+
+        /* Alinhar a quinta imagem à esquerda */
+        .page img:nth-child(5) {
+            float: left;
+            margin-left: 5px; /* Ajuste mais sutil */
+        }
+
+        /* Alinhar a sétima imagem à esquerda */
+        .page img:nth-child(7) {
+            float: left;
+            margin-left: 5px; /* Ajuste mais sutil */
+        }
+
+        /* Alinhar a nona imagem à esquerda */
+        .page img:nth-child(9) {
+            float: left;
+            margin-left: 5px; /* Ajuste mais sutil */
+        }
+
+        .page:after {
+            content: '';
+            display: block;
+            width: calc(100% - 40px); /* Considera a margem interna da div .comic */
+            border-bottom: 4px solid black;
+            position: absolute;
+            bottom: 0; /* Alterado */
+            left: 10px; /* Espaço extra para evitar o corte das imagens */
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: -30px; /* Distância do número até a borda inferior da página */
+            left: 50%; /* Centralizar horizontalmente */
+            transform: translateX(-50%); /* Centralizar horizontalmente */
+            font-size: 20px; /* Tamanho do número */
+            color: black; /* Cor do número */
+        }
+
         h1 {
-            text-align: center; /* Centralizar o cabeçalho */
+            text-align: center;
+            margin-top: 20px;
+            color: #000; /* Cor do texto */
+            font-size: 36px; /* Tamanho do texto */
+            text-transform: uppercase; /* Transformar o texto em maiúsculas */
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); /* Adicionar sombra ao texto */
         }
-        .pdf-link {
-            text-align: center; /* Centralizar o link */
-            margin-top: 20px; /* Adicionar espaço entre o PDF incorporado e o link */
+
+        h2 {
+            text-align: center;
+            margin-top: 10px; /* Espaçamento entre os títulos */
+            color: #000; /* Cor do texto */
+            font-size: 24px; /* Tamanho do texto */
         }
     </style>
 </head>
 <body>
-    <h1>Gibi</h1>
-    <embed src="GIBI.pdf" type="application/pdf" width="100%" height="600px">
-
-    <div class="pdf-link">
-        <p>Se não conseguir visualizar o PDF acima, você pode acessá-lo pelo link abaixo:</p>
-        <a href="https://drive.google.com/file/d/14L58-b-TbmZX2ANfViFMU-fE9NvDbx7R/view?usp=drive_link" target="_blank">Visualizar o Gibi no Google Drive</a>
+    <h1>GUARDIÕES DA NATUREZA: UNIDOS PELA PRESERVAÇÃO DA VIDA NA ÁGUA E NA TERRA</h1>
+    <h2>By Rebeca</h2>
+    <div class="comic">
+        <div class="page">
+            <img src="1.png" alt="Página 1">
+            <img src="2.png" alt="Página 1">
+            <div class="page-number">1</div>
+        </div>
+        <div class="page">
+            <img src="3.png" alt="Página 2">
+            <img src="4.png" alt="Página 2">
+            <div class="page-number">2</div>
+        </div>
+        <div class="page">
+            <img src="5.png" alt="Página 3">
+            <img src="6.png" alt="Página 3">
+            <div class="page-number">3</div>
+        </div>
+        <div class="page">
+            <img src="7.png" alt="Página 4">
+            <img src="8.png" alt="Página 4">
+            <div class="page-number">4</div>
+        </div>
+        <div class="page">
+            <img src="9.png" alt="Página 5">
+            <img src="10.png" alt="Página 5">
+            <div class="page-number">5</div>
+        </div>
     </div>
 </body>
 </html>
